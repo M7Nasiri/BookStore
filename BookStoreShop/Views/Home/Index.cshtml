@@ -1,0 +1,103 @@
+﻿@using BookStoreShop.Models.Domain.ViewModels
+@model NewestBooksAndCategories;
+@{
+    ViewData["Title"] = "صفحه اصلی";
+    Layout = "_CustomLayout";
+}
+
+@section styles {
+    <link rel="stylesheet" type="text/css" href="/css/customCss.css" />
+}
+
+<div class="aButton">
+    <a asp-controller="Book" asp-action="Index"> کتاب ها</a>
+</div>
+<div class="aButton">
+    <a asp-controller="Book" asp-action="Create">ایجاد کتاب</a>
+</div>
+
+    <div class="banner">
+        <h1>هر کتابی که میخوای ، اینجا هست .</h1>
+        <p>با بیش از 100,000 عنوان کتاب در دسته بندی های مختلف ، سفر مطالعاتی خود را آغاز کنید .</p>
+        <button>مشاهده پر فروش ها</button>
+    </div>
+    <div id="category">
+        <h2>دسته بندی</h2>
+        <div class="cat-items">
+        @foreach(var cat in Model.Categories)
+        {
+            <div class="cat-item bg-1">
+                <img class="catItem-img" src="@cat.ImagePath" />
+                <h3 class="title">@cat.CategoryName</h3>
+                <p>@cat.Description</p>
+            </div>
+        }
+    
+           
+           @*  <div class="cat-item bg-2">
+                <img class="catItem-img" src="~/img/category/comedy.jpeg" />
+                <h3 class="title">کمدی</h3>
+                <p>ایرانی خارجی</p>
+            </div>
+            <div class="cat-item bg-3">
+                <img class="catItem-img" src="~/img/category/political.jpeg" />
+                <h3 class="title">سیاسی</h3>
+                <p>مدرن تاریخی</p>
+            </div>
+            <div class="cat-item bg-4">
+                <img class="catItem-img" src="~/img/category/sport.jpeg" />
+                <h3 class="title">ورزشی</h3>
+                <p>فوتبالی سایر ورزشها</p>
+            </div>
+            <div class="cat-item bg-5">
+                <img class="catItem-img" src="~/img/category/tragedi.jpeg" />
+                <h3 class="title">تراژدی</h3>
+                <p>کمدی الهی دانته</p>
+            </div> *@
+        </div>
+
+    </div>
+    <div id="newBooks">
+        <h2>کتابهای جدید</h2>
+        <div class="books">
+        @foreach(var book in Model.Books)
+        {
+            <div class="book">
+                <img src=@book.ImagePath />
+                <h3>@book.Title</h3>
+                <h5>@book.Author</h5>
+                <p>@book.PageCount صفحه</p>
+                <h4>@book.Price تومان</h4>
+            </div>
+        }
+            @* <div class="book">
+                <img src="~/img/books/hotel.jpeg" />
+                <h3>هتل</h3>
+                <h5>علی اصغری</h5>
+                <p>2 ساعت</p>
+                <h4>120,000</h4>
+            </div>
+            <div class="book">
+                <img src="~/img/books/metri.jpeg" />
+                <h3>متری شیش و نیم</h3>
+                <h5>سعید روستایی</h5>
+                <p>2 ساعت</p>
+                <h4>540,000</h4>
+            </div>
+            <div class="book">
+                <img src="~/img/books/seller.jpeg" />
+                <h3>فروشنده</h3>
+                <h5>اصغر فرهادی</h5>
+                <p>2 ساعت</p>
+                <h4>430,000</h4> 
+             </div>
+            <div class="book">
+                <img src="~/img/books/zarrafeh.jpeg" />
+                <h3>صبحانه با زرافه ها</h3>
+                <h5>سروش صحت</h5>
+                <p>2 ساعت</p>
+                <h4>120,000</h4>
+            </div> *@
+        </div>
+    </div>
+

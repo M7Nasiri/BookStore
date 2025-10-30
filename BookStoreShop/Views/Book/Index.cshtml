@@ -1,0 +1,75 @@
+﻿@using BookStoreShop.Models.Domain.Entities.BookAgg
+@using BookStoreShop.Models.Domain.ViewModels.Book
+@model List<GetPagedBookViewModel>
+@{
+    ViewData["Title"] = "صفحه کتابها";
+    Layout = "_CustomLayout";
+    int totalPage = Model?.FirstOrDefault()?.TotalPage ?? 0;
+    int currentPage = Model?.FirstOrDefault()?.Page ?? 1;
+    int pageSize = Model?.FirstOrDefault()?.PageSize ?? 10;
+}
+
+@section styles {
+    <link rel="Stylesheet" type="text/css" href="/css/customCss.css" />
+}
+
+
+
+    <div class="banner">
+        <h1>هر کتابی که میخوای ، اینجا هست .</h1>
+        <p>با بیش از 100,000 عنوان کتاب در دسته بندی های مختلف ، سفر مطالعاتی خود را آغاز کنید .</p>
+        <button>مشاهده پر فروش ها</button>
+    </div>
+    <div id="newBooks">
+        <h2>کتابها</h2>
+        <div class="books">
+    @if (Model == null || !Model.Any())
+    {
+        <p>کتابی پیدا نشد.</p>
+    }
+    else
+    {
+        @foreach (var book in Model)
+        {
+                <div class="book">
+                    <img src="@book.ImagePath" />
+                    <h3>@book.Title</h3>
+                    <h5>@book.Author</h5>
+                    <p>@book.PageCount</p>
+                    <h4>@book.Price</h4>
+                </div>
+            }
+        }
+    }
+    </div>
+    <nav class="pagination">
+    @if (totalPage > 1)
+    {
+        var pageInfos = Model.FirstOrDefault();
+        if(pageInfos.Page > 1)
+        {
+                <a asp-action="Index" asp-route-page="@(currentPage - 1)" asp-route-pageSize="@pageSize" class="pagination-link">قبلی</a>
+        }
+        @for (int i = 1; i <= totalPage; i++)
+        {     
+                @if(i == pageInfos.Page)
+                {
+                        <a asp-action="Index" asp-route-page="@i" asp-route-pageSize="@pageSize" class="pagination-link active">
+                            @i
+                        </a>
+                }
+                else
+                {
+                    <a asp-action="Index" asp-route-page="@i" asp-route-pageSize="@pageSize" class="pagination-link">@i</a>
+                }
+            }
+        @if(currentPage < totalPage){
+                <a asp-action="Index" asp-route-page="@(currentPage + 1)" asp-route-pageSize="@pageSize" class="pagination-link">بعدی</a>
+        }
+    }
+    </nav>
+</div>
+
+
+
+
