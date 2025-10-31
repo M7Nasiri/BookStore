@@ -69,13 +69,13 @@ namespace BookStoreShop.Models.Implementations.Services
 
         public List<GetPagedBookViewModel> Pagination(int page=1, int pageSize=4)
         {
-            //var books = _bookRepo.GetAllBooksPagination(page,pageSize);
-            var books = _bookRepo.GetAllBooks();
-            int totalPage = (int)Math.Ceiling(books.Count/(double)pageSize);
-            var pagedBooks =  books.Skip((page -1)*pageSize).Take(pageSize).ToList();
+            var books = _bookRepo.GetAllBooksPagination(page,pageSize);
+            //var books = _bookRepo.GetAllBooks();
+            int totalPage = (int)Math.Ceiling(_bookRepo.GetCount()/(double)pageSize);
+            //var pagedBooks =  books;
             var getBookViewModels = new List<GetPagedBookViewModel>();
 
-            foreach(var b in pagedBooks)
+            foreach(var b in books)
             {
                 getBookViewModels.Add(new GetPagedBookViewModel()
                 {
@@ -93,6 +93,11 @@ namespace BookStoreShop.Models.Implementations.Services
                 });
             };
             return getBookViewModels;
+        }
+
+        public int GetCount()
+        {
+           return _bookRepo.GetCount();
         }
     }
 }

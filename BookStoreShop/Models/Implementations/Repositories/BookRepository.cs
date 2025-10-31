@@ -38,6 +38,11 @@ namespace BookStoreShop.Models.Implementations.Repositories
         {
             return _context.Books.OrderByDescending(b=>b.CreatedAt).ToList();
         }
+        public int GetCount()
+        {
+            return _context.Books.Count();
+        }
+
         public List<Book> GetAllBooksPagination(int page,int pageSize)
         {
             return _context.Books.OrderByDescending(b=>b.CreatedAt).Skip((page-1)*pageSize).Take(pageSize).ToList();

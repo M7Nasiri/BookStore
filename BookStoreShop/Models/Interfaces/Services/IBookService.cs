@@ -11,5 +11,6 @@ namespace BookStoreShop.Models.Interfaces.Services
         bool CreateBook(CreateBookViewModel model);
         bool UpdateBook(Book book);
         List<Book> GetFiveNewCreatedBooks();
+        int GetCount();
     }
 }

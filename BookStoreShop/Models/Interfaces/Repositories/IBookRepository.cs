@@ -12,6 +12,7 @@ namespace BookStoreShop.Models.Interfaces.Repositories
         List<Book> GetFiveNewCreatedBooks();
         bool IsBookExist(string title, string author, string publishYear);
         List<Book> GetAllBooksPagination(int page, int pageSize);
+        int GetCount();
 
     }
 }

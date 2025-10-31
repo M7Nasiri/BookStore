@@ -3,6 +3,7 @@ using BookStoreShop.Models.Domain.ViewModels.Book;
 using BookStoreShop.Models.Implementations.Services;
 using BookStoreShop.Models.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BookStoreShop.Controllers
 {
@@ -26,6 +27,7 @@ namespace BookStoreShop.Controllers
         {
             var cats = _catService.GetAllCategories();
             ViewBag.Categories = cats;
+            ViewBag.Categories1 = new SelectList(cats, "Id", "CategoryName");
             return View();
         }
         [HttpPost]
