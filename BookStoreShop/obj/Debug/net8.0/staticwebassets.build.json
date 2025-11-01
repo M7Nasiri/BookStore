@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rQQpxJa7BXpz/PYy0HMNbGod+Rr3NR+SExHf1b22N98=",
+  "Hash": "3WWmbWvW21lbmjKh6uKGzJwi23DoLHUGjI1vk8bZbOU=",
   "Source": "BookStoreShop",
   "BasePath": "_content/BookStoreShop",
   "Mode": "Default",
@@ -207,6 +207,25 @@
       "OriginalItemSpec": "wwwroot\\Files\\Books\\3765c056-1380-493a-a58f-0317affdd889.jpg"
     },
     {
+      "Identity": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\501b36e4-6ee0-41ae-b287-66f9cbfe5cae.jpg",
+      "SourceId": "BookStoreShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\",
+      "BasePath": "_content/BookStoreShop",
+      "RelativePath": "Files/Books/501b36e4-6ee0-41ae-b287-66f9cbfe5cae.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Books\\501b36e4-6ee0-41ae-b287-66f9cbfe5cae.jpg"
+    },
+    {
       "Identity": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\7cdc057b-d0dc-44ea-935a-326ef7a4360f.jpg",
       "SourceId": "BookStoreShop",
       "SourceType": "Discovered",
@@ -300,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Files\\Books\\e3724cac-7a2a-4eb3-bf1c-ee2573b1608e.jpg"
+    },
+    {
+      "Identity": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\fa47359e-a091-48df-b56d-20126e3778df.webp",
+      "SourceId": "BookStoreShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\",
+      "BasePath": "_content/BookStoreShop",
+      "RelativePath": "Files/Books/fa47359e-a091-48df-b56d-20126e3778df.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Books\\fa47359e-a091-48df-b56d-20126e3778df.webp"
     },
     {
       "Identity": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\fonts\\Vazir.ttf",

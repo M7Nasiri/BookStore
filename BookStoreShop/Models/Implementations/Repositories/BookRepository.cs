@@ -1,7 +1,9 @@
-﻿using BookStoreShop.Models.Domain.Entities.BookAgg;
+﻿using BookStoreShop.Models.Application.tools;
+using BookStoreShop.Models.Domain.Entities.BookAgg;
 using BookStoreShop.Models.Domain.ViewModels.Book;
 using BookStoreShop.Models.Infrastructure.Persistence;
 using BookStoreShop.Models.Interfaces.Repositories;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace BookStoreShop.Models.Implementations.Repositories
 {
@@ -25,6 +27,7 @@ namespace BookStoreShop.Models.Implementations.Repositories
                 CreatedAt = DateTime.Now,
                 CategoryId = model.CategoryId,
             };
+            book.CreatedAtFA = book.CreatedAt.ToPersianString("yyyy/MM/dd");
             _context.Add(book);
             return _context.SaveChanges() > 0;
         }

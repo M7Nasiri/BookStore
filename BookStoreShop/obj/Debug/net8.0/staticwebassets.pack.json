@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Files\\Books\\3765c056-1380-493a-a58f-0317affdd889.jpg"
     },
     {
+      "Id": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\501b36e4-6ee0-41ae-b287-66f9cbfe5cae.jpg",
+      "PackagePath": "staticwebassets\\Files\\Books\\501b36e4-6ee0-41ae-b287-66f9cbfe5cae.jpg"
+    },
+    {
       "Id": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\7cdc057b-d0dc-44ea-935a-326ef7a4360f.jpg",
       "PackagePath": "staticwebassets\\Files\\Books\\7cdc057b-d0dc-44ea-935a-326ef7a4360f.jpg"
     },
@@ -43,6 +47,10 @@
     {
       "Id": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\e3724cac-7a2a-4eb3-bf1c-ee2573b1608e.jpg",
       "PackagePath": "staticwebassets\\Files\\Books\\e3724cac-7a2a-4eb3-bf1c-ee2573b1608e.jpg"
+    },
+    {
+      "Id": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\Files\\Books\\fa47359e-a091-48df-b56d-20126e3778df.webp",
+      "PackagePath": "staticwebassets\\Files\\Books\\fa47359e-a091-48df-b56d-20126e3778df.webp"
     },
     {
       "Id": "D:\\MaktabSharif\\dev\\projects\\HW17\\BookStoreShop\\BookStoreShop\\wwwroot\\css\\customCss.css",

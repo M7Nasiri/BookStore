@@ -38,8 +38,8 @@ namespace BookStoreShop.Models.Implementations.Services
         public List<Book> GetFiveNewCreatedBooks()
         {
             var books =  _bookRepo.GetFiveNewCreatedBooks();
-            books.ForEach(book =>
-                book.CreatedAtFA = book.CreatedAt.ToPersianString("yyyy/MM/dd"));
+            //books.ForEach(book =>
+            //    book.CreatedAtFA = book.CreatedAt.ToPersianString("yyyy/MM/dd"));
             return books;
         }
 
