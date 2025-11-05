@@ -22,7 +22,7 @@ namespace BookStoreShop.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.BookAgg", b =>
+            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.BookAgg.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,7 +75,7 @@ namespace BookStoreShop.Migrations
                             Id = 1,
                             Author = "Asghar Farhadi",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(3124),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(5868),
                             ImagePath = "/img/books/seller.jpeg",
                             PageCount = 200,
                             Price = 200000m,
@@ -87,7 +87,7 @@ namespace BookStoreShop.Migrations
                             Id = 2,
                             Author = "Soroush Sehat",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(3149),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(5888),
                             ImagePath = "/img/books/zarrafeh.jpeg",
                             PageCount = 200,
                             Price = 200000m,
@@ -99,7 +99,7 @@ namespace BookStoreShop.Migrations
                             Id = 3,
                             Author = "Asghar Farhadi",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(3152),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(5891),
                             ImagePath = "/img/books/hero.jpeg",
                             PageCount = 200,
                             Price = 200000m,
@@ -111,7 +111,7 @@ namespace BookStoreShop.Migrations
                             Id = 4,
                             Author = "Saead Roustaiee",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(3156),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(5893),
                             ImagePath = "/img/books/metri.jpeg",
                             PageCount = 200,
                             Price = 200000m,
@@ -123,7 +123,7 @@ namespace BookStoreShop.Migrations
                             Id = 5,
                             Author = "Asghar Farhadi",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(3158),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(5952),
                             ImagePath = "/img/books/hotel.jpeg",
                             PageCount = 200,
                             Price = 200000m,
@@ -132,7 +132,7 @@ namespace BookStoreShop.Migrations
                         });
                 });
 
-            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.Category", b =>
+            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.CategoryAgg.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -164,7 +164,7 @@ namespace BookStoreShop.Migrations
                         {
                             Id = 1,
                             CategoryName = "Biography",
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(5542),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(8068),
                             Description = "Bio",
                             ImagePath = "/img/category/bio.jpeg"
                         },
@@ -172,7 +172,7 @@ namespace BookStoreShop.Migrations
                         {
                             Id = 2,
                             CategoryName = "Comedy",
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(5552),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(8074),
                             Description = "Comedy",
                             ImagePath = "/img/category/comedy.jpeg"
                         },
@@ -180,7 +180,7 @@ namespace BookStoreShop.Migrations
                         {
                             Id = 3,
                             CategoryName = "Political",
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(5555),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(8076),
                             Description = "Political",
                             ImagePath = "/img/category/political.jpeg"
                         },
@@ -188,7 +188,7 @@ namespace BookStoreShop.Migrations
                         {
                             Id = 4,
                             CategoryName = "Sport",
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(5557),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(8078),
                             Description = "Sport",
                             ImagePath = "/img/category/sport.jpeg"
                         },
@@ -196,15 +196,56 @@ namespace BookStoreShop.Migrations
                         {
                             Id = 5,
                             CategoryName = "Tragedi",
-                            CreatedAt = new DateTime(2025, 10, 28, 23, 28, 49, 212, DateTimeKind.Local).AddTicks(5558),
+                            CreatedAt = new DateTime(2025, 11, 1, 19, 47, 11, 676, DateTimeKind.Local).AddTicks(8079),
                             Description = "Tragedi",
                             ImagePath = "/img/category/tragedi.jpeg"
                         });
                 });
 
-            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.BookAgg", b =>
+            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.UserAgg.User", b =>
                 {
-                    b.HasOne("BookStoreShop.Models.Domain.Entities.Category", "Category")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FullName = "admin",
+                            Password = "123",
+                            Role = 1,
+                            UserName = "admin"
+                        });
+                });
+
+            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.BookAgg.Book", b =>
+                {
+                    b.HasOne("BookStoreShop.Models.Domain.Entities.CategoryAgg.Category", "Category")
                         .WithMany("Books")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -213,7 +254,7 @@ namespace BookStoreShop.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.Category", b =>
+            modelBuilder.Entity("BookStoreShop.Models.Domain.Entities.CategoryAgg.Category", b =>
                 {
                     b.Navigation("Books");
                 });

@@ -1,5 +1,5 @@
 ﻿using BookStoreShop.Models.Domain.Entities.BookAgg;
-using BookStoreShop.Models.Domain.ViewModels.Book;
+using BookStoreShop.Models.Domain.Entities.BookAgg.ViewModels;
 
 namespace BookStoreShop.Models.Interfaces.Repositories
 {

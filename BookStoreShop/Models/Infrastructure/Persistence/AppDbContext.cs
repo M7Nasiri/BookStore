@@ -1,15 +1,20 @@
 ﻿using BookStoreShop.Models.Domain.Entities.BookAgg;
 using BookStoreShop.Models.Domain.Entities.CategoryAgg;
+using BookStoreShop.Models.Domain.Entities.UserAgg;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreShop.Models.Infrastructure.Persistence
 {
     public class AppDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=LAPTOP-6U51JF85\SQL2022;Database=Maktab135_HW_17;Trusted_Connection=True;TrustServerCertificate=True;");
+            
         }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //optionsBuilder.UseSqlServer(@"Server=LAPTOP-6U51JF85\SQL2022;Database=Maktab135_HW_17;Trusted_Connection=True;TrustServerCertificate=True;");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -17,5 +22,6 @@ namespace BookStoreShop.Models.Infrastructure.Persistence
         }
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

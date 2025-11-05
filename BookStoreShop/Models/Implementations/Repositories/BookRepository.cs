@@ -1,6 +1,6 @@
 ﻿using BookStoreShop.Models.Application.tools;
 using BookStoreShop.Models.Domain.Entities.BookAgg;
-using BookStoreShop.Models.Domain.ViewModels.Book;
+using BookStoreShop.Models.Domain.Entities.BookAgg.ViewModels;
 using BookStoreShop.Models.Infrastructure.Persistence;
 using BookStoreShop.Models.Interfaces.Repositories;
 using static System.Reflection.Metadata.BlobBuilder;
@@ -10,9 +10,9 @@ namespace BookStoreShop.Models.Implementations.Repositories
     public class BookRepository : IBookRepository
     {
         private readonly AppDbContext _context;
-        public BookRepository()
+        public BookRepository(AppDbContext context)
         {
-            _context = new AppDbContext();
+            _context = context;
         }
         public bool CreateBook(CreateBookViewModel model)
         {

@@ -1,0 +1,70 @@
+﻿@using BookStoreShop.Models.Domain.Entities.UserAgg.ViewModels
+@model UsersAndCategoriesViewModel;
+@{
+    ViewData["Title"] = "صفحه مدیریت کاربران";
+    Layout = "_CustomLayout";
+}
+@section styles {
+    <link rel="Stylesheet" type="text/css" href="/css/customCss.css" asp-append-version="true" />
+}
+<div class="aButton">
+    <a asp-controller="User" asp-action="Create"> ایجاد کاربر جدید</a>
+</div>
+<div class="table-box">
+    <div class="table-title">لیست کاربران</div>
+    <table class="table-modern">
+        <tr>
+            <th>آیدی</th>
+            <th>نام کامل</th>
+            <th>نام کاربری</th>
+            <th>تصویر</th>
+            <th>نقش</th>
+            <th>عملیات</th>
+        </tr>
+
+        @foreach (var item in Model.Users)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.UserName</td>
+                <td><img src="@item.UserImagePath" /></td>
+                <td>@item.Role</td>
+                <td>
+                    <a asp-controller="User" asp-action="Edit" asp-route-Id="@item.Id">ویرایش</a>
+                    |
+                    <a asp-controller="User" asp-action="Delete" asp-route-Id="@item.Id">حذف</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="aButton">
+    <a asp-controller="Category" asp-action="Create">ایجاد دسته بندی جدید</a>
+</div>
+<div class="table-box">
+    <div class="table-title">لیست دسته‌بندی‌ها</div>
+    <table class="table-modern">
+        <tr>
+            <th>آیدی دسته</th>
+            <th>نام دسته‌بندی</th>
+            <th>تصویر</th>
+            <th>عملیات</th>
+        </tr>
+
+        @foreach (var item in Model.Categories)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.CategoryName</td>
+                <td><img src="@item.ImagePath" /></td>
+                <td>
+                    <a asp-controller="Category" asp-action="Edit" asp-route-Id="@item.Id">ویرایش</a>
+                    |
+                    <a asp-controller="Category" asp-action="Delete" asp-route-Id="@item.Id">حذف</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

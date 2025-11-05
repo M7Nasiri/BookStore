@@ -1,6 +1,6 @@
 ﻿using BookStoreShop.Models.Application.tools;
 using BookStoreShop.Models.Domain.Entities.BookAgg;
-using BookStoreShop.Models.Domain.ViewModels.Book;
+using BookStoreShop.Models.Domain.Entities.BookAgg.ViewModels;
 using BookStoreShop.Models.Implementations.Repositories;
 using BookStoreShop.Models.Interfaces.Repositories;
 using BookStoreShop.Models.Interfaces.Services;
@@ -15,10 +15,10 @@ namespace BookStoreShop.Models.Implementations.Services
     {
         private readonly IBookRepository _bookRepo;
         private readonly IFileService _fileService;
-        public BookService()
+        public BookService(IBookRepository bookRepo,IFileService fileService)
         {
-            _bookRepo = new BookRepository();
-            _fileService = new FileService();
+            _bookRepo = bookRepo;
+            _fileService = fileService;
         }
         public bool CreateBook(CreateBookViewModel model)
         {

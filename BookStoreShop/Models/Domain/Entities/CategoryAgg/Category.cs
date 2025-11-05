@@ -1,4 +1,5 @@
 ﻿using BookStoreShop.Models.Domain.Entities.BookAgg;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookStoreShop.Models.Domain.Entities.CategoryAgg
 {
@@ -10,8 +11,9 @@ namespace BookStoreShop.Models.Domain.Entities.CategoryAgg
         public string? ImagePath { get; set; }
         public DateTime CreatedAt { get; set; }
 
-        public List<Book> Books { get; set; }
+        public List<Book>? Books { get; set; }
 
-
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; }
     }
 }

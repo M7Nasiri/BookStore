@@ -4,6 +4,18 @@ namespace BookStoreShop.Models.Implementations.Services
 {
     public class FileService : IFileService
     {
+        public void Delete(string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(fileName))
+                return;
+            fileName = fileName.TrimStart('/', '\\');
+            var fullPath = $"{Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", fileName)}";
+
+            if (File.Exists(fullPath))
+            {
+                File.Delete(fullPath);
+            }
+        }
         public string Upload(IFormFile file, string folder)
         {
 
@@ -22,7 +34,7 @@ namespace BookStoreShop.Models.Implementations.Services
                 file.CopyTo(stream);
             }
 
-            return $"\\{Path.Combine("Files", folder, uniqueFileName)}";
+            return $"{Path.Combine("/Files", folder, uniqueFileName)}";
         }
     }
 }

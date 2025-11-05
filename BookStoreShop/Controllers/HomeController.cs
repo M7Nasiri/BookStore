@@ -7,19 +7,19 @@ namespace BookStoreShop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IBookService bookService;
-        private readonly ICategoryService catService;
+        private readonly IBookService _bookService;
+        private readonly ICategoryService _catService;
 
-        public HomeController()
+        public HomeController(IBookService bookService, ICategoryService categoryService)
         {
-            bookService = new BookService();
-            catService = new CategoryService();
+            _bookService = bookService;
+            _catService = categoryService;
         }
 
         public IActionResult Index()
         {
-            var books = bookService.GetFiveNewCreatedBooks();
-            var cats = catService.GetFiveNewCategory();
+            var books = _bookService.GetFiveNewCreatedBooks();
+            var cats = _catService.GetFiveNewCategory();
             var newest = new NewestBooksAndCategories
             {
                 Books = books,

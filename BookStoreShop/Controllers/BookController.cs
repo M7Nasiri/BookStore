@@ -1,5 +1,5 @@
-﻿using BookStoreShop.Models.Domain.ViewModels;
-using BookStoreShop.Models.Domain.ViewModels.Book;
+﻿using BookStoreShop.Models.Domain.Entities.BookAgg.ViewModels;
+using BookStoreShop.Models.Domain.ViewModels;
 using BookStoreShop.Models.Implementations.Services;
 using BookStoreShop.Models.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +12,10 @@ namespace BookStoreShop.Controllers
         private readonly IBookService _bookService;
         private readonly ICategoryService _catService;
 
-        public BookController()
+        public BookController(IBookService bookService,ICategoryService categoryService)
         {
-            _bookService = new BookService();
-            _catService = new CategoryService();
+            _bookService = bookService;
+            _catService = categoryService;
         }
 
         public IActionResult Index(int page=1, int pageSize=4)

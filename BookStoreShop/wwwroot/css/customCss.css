@@ -67,6 +67,9 @@ li a {
     font-size: 0.8rem;
     font-family: vf;
 }
+.inside{
+    display:flex;
+}
 
 .dropdown-menu {
     display: block;
@@ -284,7 +287,7 @@ footer p {
     margin-top: 8px;
     font-size: .7rem;
 }
-/*Create*/
+/*Create Book*/
 .aButton{
     padding:5px 10px;
     background-color:dodgerblue;
@@ -318,9 +321,12 @@ form {
     justify-content: space-between; 
     gap : 10px;
 }
-
+.form-group img{
+    width:200px;
+    height:auto;
+}
 label {
-    flex: 1; 
+    flex: 1;
     text-align: right;
     margin-bottom: 6px;
     font-weight: 600;
@@ -329,8 +335,10 @@ label {
 
 input[type="text"],
 select,
-input[type="file"] {
-    flex: 2; 
+input[type="file"],
+input[type="password"] ,
+textarea{
+    flex: 2;
     border-radius: 6px;
     border: 1px solid #ccc;
     padding: 10px 12px;
@@ -340,13 +348,16 @@ input[type="file"] {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="text"]:focus,
-select:focus,
-input[type="file"]:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 4px rgba(0,123,255,0.4);
-}
+    input[type="text"]:focus,
+    select:focus,
+    input[type="file"]:focus,
+    input[type="password"]:focus,
+    textarea:focus
+    {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 4px rgba(0,123,255,0.4);
+    }
 
 .form-buttons {
     display: flex;
@@ -403,4 +414,81 @@ button:hover {
     background-color: #007bff;
     color: white;
     font-weight: bold;
+}
+
+/*Table*/
+
+.table-box {
+    width: 90%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.table-title {
+    font-family: vbf;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #1e1e1e;
+    text-align: center;
+}
+
+table-modern {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    table-layout: fixed;
+}
+
+.table-modern th {
+    background-color: #f0f2f5;
+    padding: 12px 10px;
+    font-family: vbf;
+    font-size: .95rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+.table-modern td {
+    padding: 10px 12px;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table-modern tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.table-modern tr:hover {
+    background-color: #e6f2ff;
+    transition: .3s;
+}
+
+.table-modern a {
+    color: dodgerblue;
+    font-family: vbf;
+    margin: 0 5px;
+    transition: .3s;
+}
+
+.table-modern a:hover {
+    color: #ff5722;
+}
+.table-modern img{
+    width:50px;
+    height:auto;
+}
+
+.error{
+    color:red;
+    padding:5px 10px;
 }
